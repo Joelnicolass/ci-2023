@@ -21,6 +21,8 @@ jobs:
         run: npm run test
 
   Deploy-Production:
+    if: always()
+    needs: Unit-Test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
