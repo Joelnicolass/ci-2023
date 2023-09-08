@@ -32,5 +32,4 @@ jobs:
       - name: Build Project Artifacts
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
-        #deploy to UAT environment - custom domain name
-        run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }} --confirm --prod --prod-domain=uat-ci-2023.vercel.app
+        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
