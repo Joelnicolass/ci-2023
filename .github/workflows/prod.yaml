@@ -21,7 +21,7 @@ jobs:
         run: npm run test
 
   Deploy-Production:
-    if: always()
+    # Only run this job if the Unit-Test job passes
     needs: Unit-Test
     runs-on: ubuntu-latest
     steps:
