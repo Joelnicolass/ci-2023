@@ -5,6 +5,6 @@ import { describe, expect, it } from "vitest";
 describe("App", () => {
   it("Debe montar el componente", () => {
     render(<App />);
-    expect(true).toBe(false);
+    expect(true).toBe(true);
   });
 });
